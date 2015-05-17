@@ -1,0 +1,1 @@
+This is an example HiveMQ MQTT broker plugin which demonstrates how to use X509 client certificates with the open source HiveMQ plugin system. You can read the full blog post here: http://www.hivemq.com/mqtt-security-fundamentals-x509-client-certificate-authentication
