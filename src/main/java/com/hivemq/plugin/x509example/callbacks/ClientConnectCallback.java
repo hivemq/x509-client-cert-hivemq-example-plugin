@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 dc-square GmbH
+ * Copyright 2015 dc-square GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 
 package com.hivemq.plugin.x509example.callbacks;
 
-import com.dcsquare.hivemq.spi.callback.CallbackPriority;
-import com.dcsquare.hivemq.spi.callback.events.OnConnectCallback;
-import com.dcsquare.hivemq.spi.callback.exception.RefusedConnectionException;
-import com.dcsquare.hivemq.spi.message.CONNECT;
-import com.dcsquare.hivemq.spi.message.ReturnCode;
-import com.dcsquare.hivemq.spi.security.ClientData;
+import com.hivemq.spi.callback.CallbackPriority;
+import com.hivemq.spi.callback.events.OnConnectCallback;
+import com.hivemq.spi.callback.exception.RefusedConnectionException;
+import com.hivemq.spi.message.CONNECT;
+import com.hivemq.spi.message.ReturnCode;
+import com.hivemq.spi.security.ClientData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,7 +44,7 @@ public class ClientConnectCallback implements OnConnectCallback {
         }
         log.info("Client {} connected with X509 client certificate", clientData.getClientId());
 
-        final Certificate certificate = clientData.getCertificate().get();
+        final Certificate certificate = clientData.getCertificate().get().certificate();
 
         //We need to downcast to the X509 certificate
         if (certificate instanceof X509Certificate) {
