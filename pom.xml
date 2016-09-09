@@ -18,14 +18,14 @@
 
     <groupId>com.hivemq.plugin.x509example</groupId>
     <artifactId>x509-plugin</artifactId>
-    <version>3.0.0</version>
+    <version>3.1.0</version>
 
 
     <dependencies>
         <dependency>
             <groupId>com.hivemq</groupId>
             <artifactId>hivemq-spi</artifactId>
-            <version>3.0.0</version>
+            <version>3.1.0</version>
         </dependency>
 
         <dependency>
